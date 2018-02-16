@@ -1,0 +1,26 @@
+# server code for Game of Thrones
+server	{
+
+	listen 80;     # default server port
+    server_name  localhost;
+	root C:/xampp/got-spa-master;    # path of index file of project.
+	index  index.html;
+
+
+	# Error 404 file path
+
+	error_page 404	/error404.html;
+
+	location = /error404.html {
+		root C:/xampp/error;
+	}
+
+	# Error 500 file path
+	
+	error_page 500	/error500.html;
+
+	location = /error500.html {
+		root C:/xampp/error;
+	}
+
+}
